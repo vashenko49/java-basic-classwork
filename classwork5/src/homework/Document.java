@@ -1,4 +1,4 @@
-package homework;
+import java.util.Objects;
 
 public class Document {
     private String text;
@@ -16,9 +16,17 @@ public class Document {
         return text;
     }
 
-    public void setText(String text) {
-        version++;
+    private void setText(String text) {
         this.text = text;
+    }
+
+    public void changeText(String text) {
+        setText(text);
+        increaseVersion();
+    }
+
+    private void increaseVersion() {
+        version++;
     }
 
     public int getVersion() {
@@ -34,4 +42,19 @@ public class Document {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o instanceof Document) {
+            Document document = (Document) o;
+            return document.hashCode() == hashCode() && timeStamp == ((Document) o).timeStamp && text.equals(document.getText());
+        }else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.parseInt(author, 16);
+    }
 }
