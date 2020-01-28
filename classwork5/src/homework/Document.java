@@ -2,7 +2,7 @@ package homework;
 
 public class Document {
     private String text;
-    private int version =0;
+    private int version = 0;
     private final String author;
     private final long timeStamp;
 
