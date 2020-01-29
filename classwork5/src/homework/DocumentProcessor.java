@@ -1,6 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
-
+package homework;
 public class DocumentProcessor {
     private static final int LENGTH_ARRAY_COUNT_WORDS = 12;
 

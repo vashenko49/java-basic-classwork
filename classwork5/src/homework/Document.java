@@ -1,4 +1,4 @@
-import java.util.Objects;
+package homework;
 
 public class Document {
     private String text;

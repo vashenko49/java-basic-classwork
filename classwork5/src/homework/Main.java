@@ -1,3 +1,5 @@
+package homework;
+
 public class Main {
     public static void main(String[] args) {
         Document document = new Document("g ogo googo gogo gogo googo jdsgn gogo jdsgn gogo jdsgn googo googo", "Gogovich");
